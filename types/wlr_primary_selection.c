@@ -116,6 +116,7 @@ static struct wlr_primary_selection_offer *source_send_offer(
 	wl_resource_for_each(target_resource, &target->primary_selection_devices) {
 		gtk_primary_selection_device_send_data_offer(target_resource,
 			offer->resource);
+		break;
 	}
 
 	char **p;
